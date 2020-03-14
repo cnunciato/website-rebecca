@@ -17,4 +17,4 @@ menu:
 
 # About Me
 
-Hello! I'm Rebecca Nunciato. A homeschool mom of three living in the Pacific Northwest. I make things, and read books.
+Hello! I'm Rebecca Nunciato. A homeschool mom of three living in the Pacific Northwest. I like to make things, and read books.
