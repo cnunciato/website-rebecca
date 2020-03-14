@@ -1,0 +1,22 @@
+#!/bin/bash
+
+rm -rf \
+    components/www \
+    components/dist \
+    site/public \
+    site/static/css \
+    site/static/js/app* \
+    site/static/js/components \
+    site/static/js/dist
+
+pushd components
+    npm install
+    npm run build
+popd
+
+cp -R components/dist site/static/js/
+
+pushd site
+    npm install
+    hugo --baseURL https://rebecca.nunciato.org
+popd

@@ -1,0 +1,22 @@
+{{ define "nav" }}
+    {{ partial "header" . }}
+{{ end }}
+
+{{ define "title" }}
+    {{ if .Page.Title }}
+        {{ .Page.Title }}
+    {{ else }}
+        Untitled
+    {{ end }}
+    | {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+    <div>
+        {{ .Content }}
+    </div>
+{{ end }}
+
+{{ define "sidebar" }}
+    <!-- This is a lil' change. -->
+{{ end }}

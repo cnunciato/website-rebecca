@@ -1,0 +1,3 @@
+<a href="{{ .ctx.RelPermalink }}" title="{{ .ctx.Title }}">
+    {{ partial "photo" (dict "photo" .item.photo "src" "url" "ctx" .ctx "title" .item.photo.title) }}
+</a>

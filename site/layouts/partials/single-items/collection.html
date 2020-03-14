@@ -1,0 +1,17 @@
+<div class="">
+    <div class="mt-4 mb-8">
+        <h1>{{ .Title }}</h1>
+        <div>
+            {{ .Content }}
+        </div>
+    </div>
+    <ol>
+        {{ range .Params.items }}
+            <li>
+                <article>
+                    {{ partial "collection-items/item" (dict "item" . "ctx" $) }}
+                </article>
+            </li>
+        {{ end }}
+    </ol>
+</div>

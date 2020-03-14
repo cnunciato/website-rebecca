@@ -1,0 +1,9 @@
+<video
+    src="{{ partial "media-url" (dict "url" .video.url "ctx" .ctx) }}" alt="{{ .video.caption }}"
+    {{ if .video.poster }}poster="{{ partial "media-url" (dict "url" .video.poster "ctx" .ctx) }}"{{ end }}
+    {{ if .video.controls }} controls {{ end }}
+    {{ if .video.muted }} muted {{ end }}
+    {{ if .video.autoplay }} autoplay {{ end }}
+    {{ if .video.loop }} loop {{ end }}
+    {{ if .video.loop }} loop {{ end }}>
+</video>

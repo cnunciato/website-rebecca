@@ -1,0 +1,31 @@
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@rlnunciato" />
+<meta name="twitter:creator" content="@rlnunciato" />
+
+<meta property="og:site_name" content="rebecca.nunciato.org">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ .Permalink }}">
+
+{{ if .Title }}
+    <meta property="og:title" content="{{ .Title }}" />
+{{ else }}
+    <meta property="og:title" content="Untitled" />
+{{ end }}
+
+{{ if .Params.photo }}
+    <meta property="og:image" content="{{ partial "media-url" (dict "url" .Params.photo.preview "ctx" $) }}" />
+{{ end }}
+
+{{ if .Params.video }}
+    <meta property="og:image" content="{{ partial "media-url" (dict "url" .Params.video.preview "ctx" $) }}" />
+    <meta property="og:video" content="{{ partial "media-url" (dict "url" .Params.video.url "ctx" $) }}" />
+{{ end }}
+
+{{ if .Params.sound }}
+    <meta property="og:image" content="{{ partial "media-url" (dict "url" .Params.sound.preview "ctx" $) }}" />
+    <meta property="og:audio" content="{{ partial "media-url" (dict "url" .Params.sound.url "ctx" $) }}" />
+{{ end }}
+
+{{ $summary := (default "The Internet home of Rebecca Nunciato." (default .Summary .Params.description) ) }}
+<meta property="og:description" content="{{ $summary }}">
+<meta name="description" content="{{ $summary }}">

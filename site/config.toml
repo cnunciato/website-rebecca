@@ -1,0 +1,16 @@
+languageCode = "en-us"
+title = "Rebecca Nunciato"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[params]
+canonicalURL = "https://rebecca.nunciato.org"
+mediaRoot = "https://s3.amazonaws.com/rlnunciato-website-media/"
+
+[mediaTypes."application/rss"]
+suffixes = ["xml"]
+
+[outputFormats.RSS]
+mediaType = "application/rss"
+baseName = "index"
+isPlainText = false

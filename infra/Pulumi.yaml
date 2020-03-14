@@ -1,0 +1,7 @@
+name: website-rebecca
+runtime: nodejs
+description: Hey, it's Rebecca's website!
+template:
+  config:
+    aws:region:
+      default: us-west-2

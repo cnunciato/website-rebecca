@@ -1,0 +1,9 @@
+{
+  "name": "site",
+  "version": "0.0.1",
+  "description": "",
+  "devDependencies": {
+    "postcss-cli": "^6.1.2",
+    "tailwindcss": "^1.0.4"
+  }
+}

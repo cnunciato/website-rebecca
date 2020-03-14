@@ -1,0 +1,20 @@
+<div class="bg-gray-100 rounded p-4 md:p-12 text-gray-900">
+    <h1 class="text-3xl font-semibold mb-2">{{ .Title }}</h1>
+    <div class="text-gray-600 uppercase text-sm mb-8">
+        <span class="text-center w-4 mr-1">
+            <i class="fa fa-calendar-alt"></i>
+        </span>
+        {{ partial "date" . }}
+    </div>
+    <div>
+        {{ .Content }}
+    </div>
+    {{ if .Params.sound.preview }}
+        {{ partial "image" (dict "src" (index .Params.sound.preview) "ctx" $) }}
+    {{ end }}
+    <div>
+        <audio controls>
+            <source src="{{ partial "media-url" (dict "url" .Params.sound.url "ctx" $) }}">
+        </audio>
+    </div>
+</div>

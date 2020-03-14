@@ -1,0 +1,7 @@
+{{ if .item.photo }}
+    {{ partial "collection-items/photo" (dict "item" .item "ctx" .ctx) }}
+{{ end }}
+
+{{ if .item.video }}
+    {{ partial "collection-items/video" (dict "item" .item "ctx" .ctx) }}
+{{ end }}

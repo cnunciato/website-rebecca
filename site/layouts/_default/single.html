@@ -1,0 +1,59 @@
+{{ define "nav" }}
+    {{ partial "header" . }}
+{{ end }}
+
+{{ define "title" }}
+    {{ if .Page.Title }}
+        {{ .Page.Title }}
+    {{ else }}
+        Untitled
+    {{ end }}
+    | {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+    {{ if eq .Section "photos" }}
+        {{ partial "single-items/photo" . }}
+    {{ end }}
+
+    {{ if eq .Section "videos" }}
+        {{ partial "single-items/video" . }}
+    {{ end }}
+
+    {{ if eq .Section "sounds" }}
+        {{ partial "single-items/sound" . }}
+    {{ end }}
+
+    {{ if eq .Section "words" }}
+        {{ partial "single-items/word" . }}
+    {{ end }}
+
+    {{ if eq .Section "quotes" }}
+        {{ partial "single-items/quote" . }}
+    {{ end }}
+
+    {{ if eq .Section "collections" }}
+        {{ partial "single-items/collection" . }}
+    {{ end }}
+
+    {{ if eq .Section "books" }}
+        {{ partial "single-items/book" . }}
+    {{ end }}
+{{ end }}
+
+{{ define "sidebar" }}
+    <div class="px-4 md:px-0">
+        <div>
+            <figcaption class="flex items-center uppercase">
+                <span class="text-center w-4 mr-2">
+                    <i class="fa fa-calendar-alt"></i>
+                </span>
+                {{ partial "date" . }}
+            </figcaption>
+            {{ partial "exif" (dict "exif" (or .Params.video.exif .Params.photo.exif) ) }}
+            {{ partial "categories" . }}
+            {{ partial "tags" . }}
+            {{ partial "links" . }}
+        </div>
+    </div>
+{{ end }}

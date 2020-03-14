@@ -1,0 +1,27 @@
+{{ if eq .Section "photos" }}
+    {{ partial "list-items/photo" . }}
+{{ end }}
+
+{{ if eq .Section "videos" }}
+    {{ partial "list-items/video" . }}
+{{ end }}
+
+{{ if eq .Section "sounds" }}
+    {{ partial "list-items/sound" . }}
+{{ end }}
+
+{{ if eq .Section "words" }}
+    {{ partial "list-items/word" . }}
+{{ end }}
+
+{{ if eq .Section "quotes" }}
+    {{ partial "list-items/quote" . }}
+{{ end }}
+
+{{ if eq .Section "collections" }}
+    {{ partial "list-items/collection" . }}
+{{ end }}
+
+{{ if eq .Section "books" }}
+    {{ partial "list-items/book" . }}
+{{ end }}

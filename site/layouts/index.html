@@ -1,0 +1,21 @@
+{{ define "nav" }}
+    {{ partial "header" . }}
+{{ end }}
+
+{{ define "main" }}
+    <div>
+        <ol>
+            {{ $results := (where (where (where $.Site.Pages "Section" "in" "photos videos sounds words collections") "Section" "ne" "") "Kind" "ne" "section") }}
+            {{ $paginator := .Paginate $results 50 }}
+            {{ range $paginator.Pages }}
+                <li>
+                    <article>
+                        {{ partial "list-items/title" . }}
+                        {{ partial "list-items/item" . }}
+                    </article>
+                </li>
+            {{ end }}
+        </ol>
+        {{ partial "pagination.html" . }}
+    </div>
+{{ end }}

@@ -1,0 +1,16 @@
+config:
+  aws:region: us-west-2
+  cloud-aws:useFargate: "true"
+  cloud:provider: aws
+  website:aws_access_key_id:
+    secure: AAABAOJbGu3F9I8guVLZYZHZNBYLQ9+Hvf+r4Ke2AIW0GyfdYvQCUfILhTToI6sfh5xIyQ==
+  website:aws_secret_access_key:
+    secure: AAABAI7u7pFxTKPfo00pmeyynIZaCaEaH+/jvVN98k30sznkpaEygLmryL67MdoEbhdvEQ3VWkbOVwjXfalIDvk1EW64eWPM
+  website:certificateArn: arn:aws:acm:us-east-1:639972025873:certificate/044552ff-3c88-46d8-af77-ddcb366af26c
+  website:github_personal_access_token:
+    secure: AAABAMZMfERgxB+D2tsFC+6zT7ZKIxhVxrV5q6o/XxJXBnaGwKl7OBay3ca2wkL6BogODopqJilecJ0bdiARqAHWs977QMUZ
+  website:process_image_tag: cnunciato/process:1566787182
+  website:site_bucket: rlnunciato-website
+  website:site_dir: ../site/public/
+  website:source_bucket: rlnunciato-website-media-source
+  website:targetDomain: rebecca.nunciato.org

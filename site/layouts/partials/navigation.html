@@ -1,0 +1,11 @@
+{{ if .PrevInSection }}
+    <a href="{{ .PrevInSection.Permalink }}">
+        &larr;
+    </a>
+{{ end }}
+
+{{ if .NextInSection}}
+    <a href="{{ .NextInSection.Permalink }}">
+        &rarr;
+    </a>
+{{ end }}

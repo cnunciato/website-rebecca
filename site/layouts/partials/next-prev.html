@@ -1,0 +1,16 @@
+<div class="absolute hidden">
+    <div class="next-prev float-left" title="Next in {{ .Section | title }}">
+        {{ if .NextInSection}}
+            <a href="{{ .NextInSection.Permalink }}">
+                <span>&larr;</span>
+            </a>
+        {{ end }}
+    </div>
+    <div class="next-prev float-right" title="Previous in {{ .Section | title }}">
+        {{ if .PrevInSection }}
+            <a href="{{ .PrevInSection.Permalink }}">
+                <span>&rarr;</span>
+            </a>
+        {{ end }}
+    </div>
+</div>

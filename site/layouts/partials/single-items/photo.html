@@ -1,0 +1,19 @@
+<div class="flex items-start">
+    <div>
+        {{ if .Params.photo }}
+            <a href="{{ partial "media-url" (dict "url" .Params.photo.url "ctx" $) }}">
+                {{ partial "photo" (dict "photo" .Params.photo "src" "url" "ctx" $) }}
+            </a>
+        {{ else if .Params.video }}
+            {{ partial "video" (dict "video" .Params.video "ctx" $) }}
+        {{ else if .Params.sound }}
+            {{ partial "sound" (dict "sound" .Params.sound "ctx" $) }}
+        {{ end }}
+    </div>
+</div>
+<div class="mt-4 relative">
+    {{ partial "next-prev" . }}
+</div>
+<div class="mx-auto md:max-w-4xl mt-12">
+    {{ .Content }}
+</div>

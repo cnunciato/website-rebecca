@@ -1,0 +1,5 @@
+<div class="{{ .Get 4 }}">
+    <img src="{{ replace (.Get 0) "s3/" $.Site.Params.mediaRoot }}" title="{{ .Get 1 }}" alt="{{ .Get 1 }}">
+    <small class="left">{{ .Get 2 }}</small>
+    <small class="right">{{ .Get 3 }}</small>
+</div>

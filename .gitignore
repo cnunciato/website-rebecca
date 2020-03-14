@@ -1,0 +1,10 @@
+node_modules
+.envrc
+/bin/*.js*
+/service/bin
+/service/uploads
+/site/public/
+/site/resources/
+/site/static/css/main.css
+/site/static/js/dist
+website.code-workspace

@@ -1,0 +1,11 @@
+{{ if .Params.categories }}
+    <ul>
+        {{ range .Params.categories }}
+            <li>
+                <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">
+                    {{ . }}
+                </a>
+            </li>
+        {{ end }}
+    </ul>
+{{ end }}

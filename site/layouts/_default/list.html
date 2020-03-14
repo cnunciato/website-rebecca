@@ -1,0 +1,25 @@
+{{ define "nav" }}
+    {{ partial "header" . }}
+{{ end }}
+
+{{ define "main" }}
+    <div>
+        <ol>
+            {{ $paginator := .Paginator 50 }}
+            {{ range $paginator.Pages }}
+                {{ if .Section }}
+                    <li>
+                        <article>
+                            {{ partial "list-items/item" . }}
+                        </article>
+                    </li>
+                {{ end }}
+            {{ end }}
+        </ol>
+        {{ partial "pagination.html" . }}
+    </div>
+{{ end }}
+
+{{ define "title" }}
+    {{ title .Section }} | {{ .Site.Title }}
+{{ end }}

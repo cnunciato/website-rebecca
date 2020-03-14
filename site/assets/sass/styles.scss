@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+
+@import url('https://use.typekit.net/pjw6aje.css');
+@import "pygments";
+@import "mixins";
+
+h1, h2, h3, h4, h5, h6, time {
+    @apply font-sans;
+}
+
+body {
+    @apply font-serif;
+}
+
+code {
+
+}
+
+pre {
+
+    > code {
+
+    }
+}
+
+.pagination {
+
+    li {
+
+    }
+}
+
+.transition {
+    @include transition;
+}
+
+p {
+
+}
+
+main {
+    @apply py-6;
+
+    ol {
+
+        li {
+            @apply mb-8;
+
+            img {
+                @apply mb-4;
+            }
+        }
+    }
+
+    img, video {
+        @apply rounded shadow-lg outline-none;
+    }
+
+    &.page {
+
+        h1 {
+            @apply text-2xl font-semibold;
+        }
+
+        p {
+            @apply my-4 leading-relaxed;
+
+            a {
+                @apply text-blue-300;
+
+                &:hover {
+                    @apply underline;
+                }
+            }
+        }
+
+        &.words, &.sounds, &.videos {
+
+            h2 {
+                @apply text-lg font-semibold;
+            }
+
+            p {
+                @apply leading-relaxed my-4;
+            }
+
+            img, video {
+                @apply mb-8;
+            }
+
+            ol, ul {
+                @apply pl-4;
+            }
+
+            ol {
+                @apply list-decimal;
+            }
+
+            ul {
+                @apply list-disc;
+            }
+
+            a {
+                @apply text-blue-600;
+            }
+
+            code {
+                @apply py-1 px-2 bg-gray-100 rounded text-sm;
+            }
+
+            pre {
+                @apply overflow-x-scroll p-4 bg-white rounded border border-gray-300 text-sm leading-relaxed;
+
+                code {
+                    @apply py-0 px-0 bg-transparent rounded-none;
+                }
+            }
+        }
+    }
+
+    audio {
+        @apply w-full outline-none;
+    }
+
+    blockquote {
+        @apply border-l-4 border-blue-300 pl-4 italic text-blue-900 rounded;
+
+         p {
+             @apply py-2;
+         }
+    }
+
+    .pagination {
+        @apply p-0 flex justify-between items-center rounded bg-gray-800 font-sans text-sm overflow-hidden;
+
+        @screen md {
+            @apply inline-flex justify-center;
+        }
+
+        .page-item {
+
+            a {
+                @apply block px-2 py-1 transition;
+
+                @screen md {
+                    @apply px-6 py-2;
+                }
+
+                &:hover {
+                    @apply bg-gray-700;
+                }
+            }
+        }
+    }
+}
+
+aside {
+    p {
+        @apply leading-relaxed my-4;
+
+        @screen md {
+            @apply my-4;
+        }
+    }
+}
+
+figcaption {
+    @apply flex items-center text-sm mb-4 uppercase text-gray-600 font-sans;
+
+    > span {
+        @apply mr-4;
+    }
+}
+
+.next-prev {
+    @apply mb-4 font-sans;
+
+    a {
+        @apply block text-lg flex items-center rounded-sm bg-gray-800 text-gray-600 py-1 px-4 transition;
+
+        &:hover {
+            @apply bg-gray-700 text-gray-200;
+        }
+
+        span {
+            @apply block mx-auto;
+        }
+    }
+}
+
+@tailwind utilities;

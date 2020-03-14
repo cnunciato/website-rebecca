@@ -1,0 +1,14 @@
+#!/bin/bash
+
+export IMAGE_TAG="cnunciato/process:$(date +%s)"
+
+echo "Building $IMAGE_TAG..."
+docker build --no-cache -t "$IMAGE_TAG" service
+
+echo "Pushing..."
+docker push "$IMAGE_TAG"
+
+echo "Applying the new image to the Pulumi config..."
+pulumi config set service_image "$IMAGE_TAG" --cwd infra
+
+echo "Done."

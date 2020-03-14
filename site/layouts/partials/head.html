@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{{ $toCSS := (dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $postCSS := (dict "config" "postcss.config.js") }}
+{{ $styles := resources.Get "sass/styles.scss" | resources.ToCSS $toCSS | resources.PostCSS $postCSS }}
+<link rel="stylesheet" href="{{ $styles.Permalink }}">
+
+{{ partial "opengraph" . }}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/dist/cdn.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+{{ with .OutputFormats.Get "RSS" }}
+    <link href="{{ $.Site.Params.canonicalURL }}{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+{{ end }}

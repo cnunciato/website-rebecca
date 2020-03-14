@@ -1,0 +1,16 @@
+<a href="{{ .RelPermalink }}" title="{{ .Title }}">
+    {{ partial "photo" (dict "photo" .Params.photo "src" "preview" "ctx" $ "title" .Params.photo.caption) }}
+</a>
+
+<figcaption>
+    <span>
+        <i class="mr-1 fa fa-calendar-alt"></i>
+        {{ partial "date" . }}
+    </span>
+    {{ if .WordCount }}
+        <span title="{{ .WordCount }} words">
+            <i class="mr-1 far fa-file-alt"></i>
+            {{ .WordCount }}
+        </span>
+    {{ end }}
+</figcaption>

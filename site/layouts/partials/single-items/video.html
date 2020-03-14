@@ -1,0 +1,8 @@
+<div class="flex items-start">
+    <div>
+        {{ partial "video" (dict "video" .Params.video "ctx" $) }}
+    </div>
+</div>
+<div class="mx-auto md:max-w-4xl">
+    {{ .Content }}
+</div>

@@ -1,0 +1,13 @@
+<div class="bg-gray-200 rounded p-4 md:p-12 text-gray-900">
+    <h1 class="text-3xl font-semibold mb-2">{{ .Title }}</h1>
+    <div class="text-gray-600 uppercase text-sm mb-8">
+        <span class="text-center w-4 mr-1">
+            <i class="fa fa-calendar-alt"></i>
+        </span>
+        {{ partial "date" . }}
+    </div>
+    <img src="{{ .Params.photo.url }}" alt="">
+    <div>
+        {{ .Content }}
+    </div>
+</div>

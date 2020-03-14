@@ -1,0 +1,24 @@
+{
+    "name": "components",
+    "version": "0.0.1",
+    "description": "A web-component library for the website",
+    "main": "dist/index.js",
+    "types": "dist/types/index.d.ts",
+    "module": "dist/esm/es5/index.js",
+    "collection": "dist/collection/collection-manifest.json",
+    "collection:main": "dist/collection/index.js",
+    "files": [
+        "dist/"
+    ],
+    "scripts": {
+        "build": "stencil build",
+        "start": "stencil build --dev --watch --serve",
+        "test": "stencil test --spec --e2e",
+        "test.watch": "stencil test --spec --e2e --watchAll"
+    },
+    "devDependencies": {
+        "@stencil/core": "~0.17.0",
+        "@stencil/sass": "^0.2.1"
+    },
+    "license": "MIT"
+}

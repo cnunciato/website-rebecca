@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {{ partial "head" . }}
+        <title>
+            {{ block "title" . }}
+                {{ .Site.Title }}
+            {{ end }}
+        </title>
+    </head>
+    <body class="bg-gray-900 text-blue-100">
+        {{ $container := "container" }}
+        {{ if (and (.Section) (eq .Kind "page") (in "photos videos" .Section)) }}
+            {{ $container = "" }}
+        {{ end }}
+
+        <div class="">
+            <div class="bg-gray-800">
+                <div class="container mx-auto">
+                    <div class="md:mx-auto md:max-w-3xl">
+                        {{ block "nav" . }}
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+
+            <main class="{{ .Section }} {{ .Kind }} px-4 lg:px-0">
+                <div
+                    {{ if in "home section" .Kind }} class="md:mx-auto md:max-w-3xl" {{ end }}
+                    {{ if and (or (in "sounds words collections" .Section) (eq "" .Section)) (in "page" .Kind) }} class="md:mx-auto md:max-w-4xl" {{ end }}
+                    {{ if and (in "photos videos" .Section) (in "page" .Kind) }} class="md:mx-auto md:max-w-6xl" {{ end }}
+                    >
+                    {{ block "main" . }}
+                    {{ end }}
+                </div>
+            </main>
+            <aside class="sidebar md:mx-auto md:max-w-4xl">
+                {{ block "sidebar" . }}
+                {{ end }}
+            </aside>
+        </div>
+        <div class="mx-auto text-center text-sm text-gray-500 font-sans mb-12 mt-8 pt-4">
+            {{ partial "footer" . }}
+        </div>
+        <script src="/js/main.js"></script>
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-33874507-2','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
