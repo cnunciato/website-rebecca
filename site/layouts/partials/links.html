@@ -1,10 +1,10 @@
 {{ if .Params.links }}
-    <div class="text-gray-600 border-t border-gray-800 pt-8 mt-8">
+    <div class="text-gray-900 border-t border-gray-500 pt-8 px-4 md:px-16 mt-8">
         <h4 class="mb-2">Related Links</h4>
         <ul class="text-sm leading-relaxed">
             {{ range .Params.links }}
                 <li>
-                    <a class="text-gray-500 hover:text-gray-200 transition" href="{{ .url }}">{{ .name }}</a> &rarr;
+                    <a class="text-gray-800 hover:text-gray-600 transition" href="{{ .url }}">{{ .name }}</a> &rarr;
                 </li>
             {{ end }}
         </ul>
