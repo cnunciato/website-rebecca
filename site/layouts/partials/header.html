@@ -1,28 +1,28 @@
 <nav>
     <header>
-        <div class="p-4 lg:px-0 text-gray-200">
+        <div class="p-4 lg:px-0 text-white">
             <div class="flex flex-wrap items-center justify-between"><!--  md:rounded md:bg-gray-800 md:px-4 md:py-2 -->
                 <a class="block mt-2 md:mt-0" href="/">
                     <h1 class="text-lg font-semibold">
                         Rebecca Nunciato
                     </h1>
                 </a>
-                <ul class="order-3 inline-flex flex-wrap items-center lg:items-end mt-2 md:mt-0 xl:flex-no-wrap p-0 text-sm font-sans text-blue-200">
+                <ul class="order-3 inline-flex flex-wrap items-center lg:items-end mt-2 md:mt-0 xl:flex-no-wrap p-0 text-sm font-sans text-gray-100">
                     {{ range $.Site.Menus.main }}
                         {{ if .Weight }}
                             <li>
                                 {{ $active := hasPrefix $.RelPermalink .URL }}
-                                <a href="{{ .URL }}" class="inline-block my-1 py-1 px-2 mr-2 lg:border-none hover:bg-blue-800 hover:text-gray-400 transition rounded {{ if $active }} bg-gray-700 text-blue-100 hover:bg-blue-800 hover:text-gray-400 {{ else }} {{ end }}">
+                                <a href="{{ .URL }}" class="inline-block my-1 py-1 px-2 mr-2 lg:border-none hover:bg-gray-600 hover:text-white transition rounded {{ if $active }} bg-gray-600 text-white hover:bg-gray-500 hover:text-gray-100 {{ else }} {{ end }}">
                                     {{ .Name }}
                                 </a>
                             </li>
                         {{ end }}
                     {{ end }}
                 </ul>
-                <ul class="order-2 md:order-3 mt-2 md:mt-0 inline-flex flex-wrap text-sm text-gray-500">
-                    <li class="hover:text-gray-300 transition"><a class="mr-2" href="https://twitter.com/rlnunciato" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                    <li class="hover:text-gray-300 transition"><a class="mr-2" href="https://instagram.com/rebecca.nunciato" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-                    <li class="hover:text-gray-300 transition"><a class="mr-2" href="/index.xml" title="RSS"><i class="fas fa-rss"></i></a></li>
+                <ul class="order-2 md:order-3 mt-2 md:mt-0 inline-flex flex-wrap text-white">
+                    <li class="hover:text-white transition"><a href="https://twitter.com/rlnunciato" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li class="hover:text-white transition"><a class="mx-4" href="https://instagram.com/rebecca.nunciato" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li class="hover:text-white transition"><a href="/index.xml" title="RSS"><i class="fas fa-rss"></i></a></li>
                 </ul>
             </div>
         </div>

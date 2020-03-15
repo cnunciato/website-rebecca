@@ -44,12 +44,6 @@
 {{ define "sidebar" }}
     <div class="px-4 md:px-0">
         <div>
-            <figcaption class="flex items-center uppercase">
-                <span class="text-center w-4 mr-2">
-                    <i class="fa fa-calendar-alt"></i>
-                </span>
-                {{ partial "date" . }}
-            </figcaption>
             {{ partial "exif" (dict "exif" (or .Params.video.exif .Params.photo.exif) ) }}
             {{ partial "categories" . }}
             {{ partial "tags" . }}

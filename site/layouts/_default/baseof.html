@@ -8,14 +8,14 @@
             {{ end }}
         </title>
     </head>
-    <body class="bg-gray-900 text-blue-100">
+    <body>
         {{ $container := "container" }}
         {{ if (and (.Section) (eq .Kind "page") (in "photos videos" .Section)) }}
             {{ $container = "" }}
         {{ end }}
 
         <div class="">
-            <div class="bg-gray-800">
+            <div class="bg-gray-900">
                 <div class="container mx-auto">
                     <div class="md:mx-auto md:max-w-3xl">
                         {{ block "nav" . }}
@@ -23,11 +23,10 @@
                     </div>
                 </div>
             </div>
-
             <main class="{{ .Section }} {{ .Kind }} px-4 lg:px-0">
                 <div
                     {{ if in "home section" .Kind }} class="md:mx-auto md:max-w-3xl" {{ end }}
-                    {{ if and (or (in "sounds words collections" .Section) (eq "" .Section)) (in "page" .Kind) }} class="md:mx-auto md:max-w-4xl" {{ end }}
+                    {{ if and (or (in "sounds words collections" .Section) (eq "" .Section)) (in "page" .Kind) }} class="md:mx-auto md:max-w-3xl" {{ end }}
                     {{ if and (in "photos videos" .Section) (in "page" .Kind) }} class="md:mx-auto md:max-w-6xl" {{ end }}
                     >
                     {{ block "main" . }}
