@@ -6,7 +6,9 @@
         </span>
         {{ partial "date" . }}
     </div>
-    <img src="{{ .Params.photo.url }}" class="max-h-full" alt="">
+    {{ if .Params.photo.url }}
+        <img src="{{ .Params.photo.url }}" class="max-h-full" alt="">
+    {{ end }}
     <div class="text-lg">
         {{ .Content }}
     </div>

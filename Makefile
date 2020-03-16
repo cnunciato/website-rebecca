@@ -2,6 +2,10 @@
 build:
 	bin/build
 
+.PHONY: build-preview
+build-preview:
+	bin/build-preview
+
 .PHONY: invalidate
 invalidate:
 	aws cloudfront create-invalidation \
