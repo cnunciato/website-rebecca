@@ -21,7 +21,7 @@ links:
 
 <div class="flex">
     <a href="https://www.goodreads.com/book/show/368916.84_Charing_Cross_Road">
-        <img src="/media/images/photos/84-charing-cross-cover.png"
+        <img src="/media/images/photos/84-charing-cross-cover.jpg"
             title="84 Charing Cross Road, by Helene Hanff">
     </a>
     <a href="https://www.goodreads.com/book/show/39832183-the-guernsey-literary-and-potato-peel-pie-society"
@@ -30,7 +30,7 @@ links:
             title="The Guernsey Literary and Potato Peel Pie Society, by Mary Ann Shaffer and Annie Barrows">
     </a>
     <a href="https://www.goodreads.com/book/show/18167006-delicious">
-        <img src="/media/images/photos/delicious-cover.png"
+        <img src="/media/images/photos/delicious-cover.jpg"
             title="Delicious, by Ruth Reichl">
     </a>
 </div>
