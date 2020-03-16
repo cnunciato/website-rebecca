@@ -2,7 +2,7 @@
     "name": "website",
     "version": "0.0.1",
     "author": "Christian Nunciato <christian@nunciato.org>",
-    "description": "Hey, it's my website!",
+    "description": "Hey, it's Rebecca's website!",
     "scripts": {
         "test": "concurrently --kill-others --success first 'http-server site/public -p 9999' 'blc -ro http://localhost:9999'",
         "serve": "concurrently 'make watch_site'"
