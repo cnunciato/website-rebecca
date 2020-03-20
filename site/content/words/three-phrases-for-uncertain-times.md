@@ -1,5 +1,5 @@
 ---
-title: Three Phrases for Uncertain Times
+title: Three Phrases Helping Me Make Choices in Uncertain Times
 date: 2020-03-20T07:16:32-07:00
 draft: false
 description:
