@@ -4,11 +4,8 @@ description: Here are some practices that help me get through the days.
 date: 2020-03-13T21:13:09-07:00
 draft: false
 photo:
-  url: '/media/images/photos/sam-hand-caterpillar.jpg'
-  thumb: '/media/images/photos/sam-hand-caterpillar.jpg'
-  preview: '/media/images/photos/sam-hand-caterpillar.jpg'
-  title:
-  caption:
+  url: /media/images/photos/sam-hand-caterpillar.jpg
+  thumb: /media/images/photos/sam-hand-caterpillar.jpg
 ---
 
 **Wake up first**. Getting up before the kids is key for me. Having time to do some things

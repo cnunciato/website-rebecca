@@ -6,10 +6,6 @@ description:
 photo:
   url: /media/images/photos/mantras.jpg
   thumb: /media/images/photos/mantras-thumb.jpg
-  preview: s3/previews/something.jpg
-  created: 2020-03-20T07:16:32-07:00
-  title:
-  caption:
 ---
 
 * Use what you have
