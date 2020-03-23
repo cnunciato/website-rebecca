@@ -79,6 +79,10 @@ main {
 
             h2 {
                 @apply text-lg font-semibold;
+
+                &.subtitle {
+                    @apply text-lg font-normal;
+                }
             }
 
             p {
