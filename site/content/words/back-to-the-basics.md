@@ -86,8 +86,8 @@ NaNoWriMo](https://ywp.nanowrimo.org/pages/camp-nanowrimo) for the month of Apri
 
 ## Reading and Writing together
 
-You can get reading and writing done together! I highly recommend Brave Writer’s Arrow and
-Boomerang programs, for elementary and middle schools, respectively. Both are one-shot
+You can get reading and writing done together! I highly recommend Brave Writer’s [Arrow](https://store.bravewriter.com/collections/arrow-single-issues) and
+[Boomerang](https://store.bravewriter.com/collections/boomerang-single-issues) programs, for elementary and middle schools, respectively. Both are one-shot
 tools that give you four weeks of reading, handwriting, copy work, spelling, grammar,
 writing! We use these Arrow lessons a lot and I have always learned something myself — a
 small investment that can give you a month of learning and fun for you and your kids.
