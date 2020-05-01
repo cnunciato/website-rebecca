@@ -5,7 +5,7 @@ pygmentsUseClasses = true
 
 [params]
 canonicalURL = "https://rebecca.nunciato.org"
-mediaRoot = "https://s3.amazonaws.com/rlnunciato-website-media/"
+mediaRoot = "https://rlnunciato-website-media.s3.amazonaws.com/"
 
 [mediaTypes."application/rss"]
 suffixes = ["xml"]
