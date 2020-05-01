@@ -5,6 +5,7 @@ draft: false
 description: Sewn notebooks for bullet journaling and kid projects
 photo:
   url: s3/images/2020-05-01-07-24-49.jpg
+  preview: s3/previews/2020-05-01-07-24-49.jpg
   thumb: s3/thumbs/2020-05-01-07-24-49.jpg
 ---
 
